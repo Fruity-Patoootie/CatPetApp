@@ -1,10 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WinActivity">
+    tools:context=".MainActivity"
+    android:background="?attr/colorSurface">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:contentDescription="Kitty!"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/label_health"
+        style="@style/text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="10dp"
+        android:text="Health: "
+        />
+
+    <ProgressBar
+        android:id="@+id/bar_health"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+
+        android:progress="25"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/label_happiness"
+        style="@style/text"
+        android:layout_marginStart= "20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="20dp"
+        android:text="Happiness: "
+        />
+
+    <ProgressBar
+        android:id="@+id/bar_happiness"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:progress="25"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/label_hunger"
+        style="@style/text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="20dp"
+        android:text="Hunger: "
+        />
+    <ProgressBar
+        android:id="@+id/bar_hunger"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:progress="25"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/label_energy"
+        style="@style/text"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="20dp"
+        android:text="Energy: "
+        />
+
+    <ProgressBar
+        android:id="@+id/bar_energy"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:progress="25"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/label_win"
+        style="@style/text"
+        android:layout_below="@+id/bar_energy"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="You Win!"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_feed"
+        style="@style/buttonWin"
+        android:layout_marginVertical="20dp"
+        android:text="Play Again?"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        />
+
+
+    </LinearLayout>

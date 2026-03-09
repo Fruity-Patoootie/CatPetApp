@@ -1,62 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="?attr/colorSurface">
 <ImageView
     android:id="@+id/img"
     android:layout_width="220dp"
     android:layout_height="220dp"
     android:layout_centerHorizontal="true"
-    android:layout_margin="20"
+    android:layout_margin="15dp"
     android:contentDescription="Kitty!"
-    android:src="@drawable/idle.gif" />
+    android:src="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/label_health"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
+        style="@style/text"
         android:layout_below="@+id/img"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginVertical="10dp"
         android:text="Health: "
         />
+
+    <ProgressBar
+        android:id="@+id/bar_health"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_health"
+        android:progress="25"
+        android:layout_centerHorizontal="true"
+        />
+
     <TextView
         android:id="@+id/label_happiness"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_below="@+id/label_health"
+        style="@style/text"
+        android:layout_below="@+id/bar_health"
         android:layout_marginStart= "20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="15dp"
         android:text="Happiness: "
+        />
+
+    <ProgressBar
+        android:id="@+id/bar_happiness"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_happiness"
+        android:progress="25"
+        android:layout_centerHorizontal="true"
         />
 
     <TextView
         android:id="@+id/label_hunger"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_below="@+id/label_happiness"
+        style="@style/text"
+        android:layout_below="@+id/bar_happiness"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="15dp"
         android:text="Hunger: "
     />
+    <ProgressBar
+        android:id="@+id/bar_hunger"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_hunger"
+        android:progress="25"
+        android:layout_centerHorizontal="true"
+        />
     <TextView
         android:id="@+id/label_energy"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_below="@+id/label_hunger"
+        style="@style/text"
+        android:layout_below="@+id/bar_hunger"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="15dp"
         android:text="Energy: "
     />
 
+    <ProgressBar
+        android:id="@+id/bar_energy"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_energy"
+        android:progress="25"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_feed"
+        style="@style/button"
+        android:layout_below="@+id/bar_energy"
+        android:text="Feed"
+        android:layout_marginStart="40dp"
+        />
+    <Button
+        android:id="@+id/btn_play"
+        style="@style/button"
+        android:layout_below="@+id/bar_energy"
+        android:layout_alignEnd="@id/bar_energy"
+        android:text="Play"
+        android:layout_marginEnd="20dp"
+        />
+    <Button
+        android:id="@+id/btn_vet"
+        style="@style/button"
+        android:layout_below="@+id/btn_feed"
+        android:layout_marginVertical="10dp"
+        android:text="Vet"
+        android:layout_marginStart="40dp"
+        />
+    <Button
+        android:id="@+id/btn_pet"
+        style="@style/button"
+        android:layout_below="@+id/btn_play"
+        android:layout_alignEnd="@id/bar_energy"
+        android:text="Pet"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="10dp"
+        />
 
 
 </RelativeLayout>
+</ScrollView>
