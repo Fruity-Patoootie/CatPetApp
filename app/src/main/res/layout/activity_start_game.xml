@@ -5,13 +5,57 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartGameActivity">
+    tools:context=".StartGameActivity"
+    android:background="?attr/colorSurface">
+
     <TextView
-        android:id="@+id/label_health"
-        style="@style/text"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:id="@+id/label_welcome"
+        style="@style/colorDark"
+        android:layout_width="350dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginVertical="10dp"
-        android:text="Health: "
+        android:layout_marginTop="150dp"
+        android:textSize="30dp"
+        android:text="\n\nWelcome to Pet Paradise!" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:contentDescription="Kitty!"
+        android:layout_below="@+id/label_welcome"
+        android:src="@drawable/icon" />
+
+    <TextView
+        style="@style/colorDark"
+        android:id="@+id/label_name"
+        android:layout_height="20dp"
+        android:layout_width="350dp"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="50dp"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Please enter your pet's name:"
         />
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_height="40dp"
+        android:layout_width="350dp"
+        android:layout_below="@+id/label_name"
+        android:layout_marginVertical="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        />
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/button"
+        android:layout_below="@+id/edit_name"
+        android:layout_centerHorizontal="true"
+        android:text="Start!"
+        android:layout_marginStart="40dp"
+        />
+
 </RelativeLayout>

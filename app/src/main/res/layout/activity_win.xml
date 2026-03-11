@@ -9,14 +9,25 @@
     tools:context=".MainActivity"
     android:background="?attr/colorSurface">
 
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_height="25dp"
+        android:layout_width="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="empty"
+        />
+
     <ImageView
         android:id="@+id/img"
         android:layout_width="220dp"
         android:layout_height="220dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
+        android:layout_below="@+id/label_name"
         android:contentDescription="Kitty!"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="drawable/icon" />
 
     <TextView
         android:id="@+id/label_health"
@@ -32,7 +43,6 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-
         android:progress="25"
         android:layout_gravity="center_horizontal"
         />
@@ -42,7 +52,7 @@
         style="@style/text"
         android:layout_marginStart= "20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="15dp"
         android:text="Happiness: "
         />
 
@@ -60,7 +70,7 @@
         style="@style/text"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="15dp"
         android:text="Hunger: "
         />
     <ProgressBar
@@ -76,7 +86,7 @@
         style="@style/text"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="15dp"
         android:text="Energy: "
         />
 
@@ -86,11 +96,8 @@
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:progress="25"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"        android:layout_marginBottom="20dp"
         />
-
-
     <TextView
         android:id="@+id/label_win"
         style="@style/text"
@@ -104,7 +111,7 @@
         />
 
     <Button
-        android:id="@+id/btn_feed"
+        android:id="@+id/btn_play_again"
         style="@style/buttonWin"
         android:layout_marginVertical="20dp"
         android:text="Play Again?"

@@ -16,4 +16,7 @@
         <item name="android:layout_height">20dp</item>
         <item name="android:textColor">@color/ocean_accent</item>
     </style>
+    <style name="colorDark">
+        <item name="android:textColor">@color/ocean_progress</item>
+    </style>
 </resources>

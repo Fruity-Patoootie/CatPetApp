@@ -1,7 +1,9 @@
 package com.laura.petgame
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,5 +29,15 @@ class WinActivity : AppCompatActivity() {
         barEnergy.progress = energy
         barHealth.progress = health
         barHappiness.progress = happiness
+
+        val nameLabel = findViewById<TextView>(R.id.label_name)
+        val name = intent.getStringExtra("name")
+        nameLabel.text = name
+
+        val btn = findViewById<Button>(R.id.btn_play_again)
+
+        btn.setOnClickListener{
+            finish()
+        }
     }
 }

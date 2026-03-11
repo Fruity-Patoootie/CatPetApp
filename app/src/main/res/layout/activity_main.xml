@@ -3,7 +3,8 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/colorSurface">
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,14 +15,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="?attr/colorSurface">
-<ImageView
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_height="25dp"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="your name here"
+        />
+
+    <ImageView
     android:id="@+id/img"
     android:layout_width="220dp"
     android:layout_height="220dp"
     android:layout_centerHorizontal="true"
-    android:layout_margin="15dp"
+    android:layout_below="@+id/label_name"
     android:contentDescription="Kitty!"
-    android:src="@drawable/ic_launcher_background" />
+    android:src="@drawable/icon" />
 
     <TextView
         android:id="@+id/label_health"

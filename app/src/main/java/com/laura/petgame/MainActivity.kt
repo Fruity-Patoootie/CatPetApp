@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
+        val nameLabel = findViewById<TextView>(R.id.label_name)
+        val name = intent.getStringExtra("name")
+        nameLabel.text = name
+
         // Button declarations
         val btnFeed = findViewById<Button>(R.id.btn_feed)
         val btnPlay = findViewById<Button>(R.id.btn_play)
@@ -35,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         val barEnergy = findViewById<ProgressBar>(R.id.bar_energy)
         val barHealth = findViewById<ProgressBar>(R.id.bar_health)
         val barHappiness = findViewById<ProgressBar>(R.id.bar_happiness)
-
 
         btnFeed.setOnClickListener {
             barHunger.progress -= 5;
@@ -52,6 +57,9 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("happiness", barHappiness.progress)
                 intent.putExtra("hunger", barHunger.progress)
 
+
+                intent.putExtra("name", name)
+                finish()
                 startActivity(intent)
             }
         }
@@ -71,6 +79,8 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("happiness", barHappiness.progress)
                 intent.putExtra("hunger", barHunger.progress)
 
+                intent.putExtra("name", name)
+                finish()
                 startActivity(intent)
             }
         }
@@ -91,6 +101,8 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("happiness", barHappiness.progress)
                 intent.putExtra("hunger", barHunger.progress)
 
+                intent.putExtra("name", name)
+                finish()
                 startActivity(intent)
             }
         }
@@ -110,10 +122,11 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("happiness", barHappiness.progress)
                 intent.putExtra("hunger", barHunger.progress)
 
+                intent.putExtra("name", name)
+                finish()
                 startActivity(intent)
             }
         }
-
     }
     override fun onStart() {
         super.onStart()
